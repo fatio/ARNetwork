@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniel' => 'linzhdk@gmail.com' }
   s.source           = { :git => 'https://github.com/dklinzh/ARNetwork.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
   s.source_files = 'ARNetwork/Classes/**/*.{h,m}'
   s.dependency 'AFNetworking', '~> 3.1'
   s.dependency 'Realm', '~> 2.1'
