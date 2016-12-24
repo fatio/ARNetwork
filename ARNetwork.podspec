@@ -8,10 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ARNetwork'
-  s.version          = '0.2.1'
-  s.summary          = 'A network framework in combination with HTTP and data cache. (AFNetworking+Realm)'
+  s.version          = '0.2.2'
+  s.summary          = 'An iOS network framework in combination with HTTP and data cache. (AFNetworking+Realm)'
   s.description      = <<-DESC
-                        A network framework in combination with HTTP and data cache. (AFNetworking+Realm)
+                        An iOS network framework in combination with HTTP and data cache. (AFNetworking+Realm)
                        DESC
   s.homepage         = 'https://github.com/dklinzh/ARNetwork'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -37,7 +37,8 @@ Pod::Spec.new do |s|
     ss.frameworks = 'CoreTelephony', 'SystemConfiguration'
     ss.vendored_frameworks = 'ARNetwork/Frameworks/HTTPDNS/*.framework'
 
-    ss.source_files = 'ARNetwork/Classes/HTTP/HTTPDNS/*.{h,m}'
+#ss.public_header_files = 'ARNetwork/Classes/HTTP/HTTPDNS/*.h', 'ARNetwork/Frameworks/HTTPDNS/AlicloudHttpDNS.framework/**/*.h'
+    ss.source_files = 'ARNetwork/Classes/HTTP/HTTPDNS/*.{h,m}', 'ARNetwork/Frameworks/HTTPDNS/AlicloudHttpDNS.framework/**/*.h'
   end
 
   s.subspec 'Cache' do |ss|
