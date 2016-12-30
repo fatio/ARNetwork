@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ARNetwork'
-  s.version          = '0.2.6'
+  s.version          = '0.2.7'
   s.summary          = 'An iOS network framework in combination with HTTP and data cache. (AFNetworking+Realm)'
   s.description      = <<-DESC
                         An iOS network framework in combination with HTTP and data cache. (AFNetworking+Realm)
