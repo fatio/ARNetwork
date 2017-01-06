@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ARNetwork'
-  s.version          = '0.2.8'
+  s.version          = '0.2.9'
   s.summary          = 'An iOS network framework in combination with HTTP and data cache. (AFNetworking+Realm)'
   s.description      = <<-DESC
                         An iOS network framework in combination with HTTP and data cache. (AFNetworking+Realm)
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'CoreTelephony', 'SystemConfiguration'
     ss.vendored_frameworks = 'ARNetwork/Frameworks/HTTPDNS/*.framework'
 
-#ss.public_header_files = 'ARNetwork/Classes/HTTP/HTTPDNS/*.h', 'ARNetwork/Frameworks/HTTPDNS/AlicloudHttpDNS.framework/**/*.h'
+   #ss.public_header_files = 'ARNetwork/Classes/HTTP/HTTPDNS/*.h', 'ARNetwork/Frameworks/HTTPDNS/AlicloudHttpDNS.framework/**/*.h'
     ss.source_files = 'ARNetwork/Classes/HTTP/HTTPDNS/*.{h,m}', 'ARNetwork/Frameworks/HTTPDNS/AlicloudHttpDNS.framework/**/*.h'
   end
 
@@ -48,4 +48,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'ARNetwork/Classes/Cache/*.{h,m}'
   end
 
+  s.subspec 'Detector' do |ss|
+    ss.source_files = 'ARNetwork/Classes/Detector/*.{h,m}'
+  end
 end
